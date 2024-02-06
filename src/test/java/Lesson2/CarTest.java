@@ -23,14 +23,14 @@ class CarTest {
     @Test
     @DisplayName("Car has 4 wheels")
     void carHasFourWheels() {
-        assertEquals(this.car.getNumWheels(), 4);
+        assertEquals(4, this.car.getNumWheels());
     }
 
     @Test
     @DisplayName("Car test drive speed")
     void testDrive() {
         car.testDrive();
-        assertEquals(this.car.getSpeed(), 60);
+        assertEquals(60, this.car.getSpeed());
     }
 
     @Test
@@ -38,6 +38,6 @@ class CarTest {
     void park() {
         car.testDrive();
         car.park();
-        assertEquals(this.car.getSpeed(), 0);
+        assertEquals(0, this.car.getSpeed());
     }
 }

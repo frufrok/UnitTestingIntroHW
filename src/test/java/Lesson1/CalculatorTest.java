@@ -13,13 +13,13 @@ class CalculatorTest {
     @Test
     @DisplayName("Discount = 0")
     void discountEqualsZero() {
-        assertEquals(Calculator.calculatingDiscount(1, 0), 1);
+        assertEquals(1, Calculator.calculatingDiscount(1, 0));
     }
 
     @Test
     @DisplayName("Discount = 100")
     void discountEqualsHundred() {
-        assertEquals(Calculator.calculatingDiscount(1, 100), 0);
+        assertEquals(0, Calculator.calculatingDiscount(1, 100));
     }
 
     @Test
@@ -39,7 +39,7 @@ class CalculatorTest {
     @Test
     @DisplayName("Purchase = 0")
     void purchaseEqualsZero() {
-        assertEquals(Calculator.calculatingDiscount(0, 1), 0);
+        assertEquals(0, Calculator.calculatingDiscount(0, 1));
     }
 
 }

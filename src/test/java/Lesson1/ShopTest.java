@@ -38,7 +38,7 @@ class ShopTest {
     @DisplayName("Set and get products")
     void getSetProducts() {
         this.shop.setProducts( testProducts);
-        assertEquals(this.shop.getProducts(),  testProducts);
+        assertEquals(testProducts, this.shop.getProducts());
     }
 
     @Test
@@ -46,17 +46,17 @@ class ShopTest {
     void sortProductsByPrice() {
         this.shop.setProducts( testProducts);
         ArrayList<Product> sorted = new ArrayList<>(this.shop.sortProductsByPrice());
-        assertEquals(sorted.size(), 4);
-        assertEquals(sorted.get(0), testProducts.get(2));
-        assertEquals(sorted.get(1), testProducts.get(3));
-        assertEquals(sorted.get(2), testProducts.get(1));
-        assertEquals(sorted.get(3), testProducts.get(0));
+        assertEquals(4, sorted.size());
+        assertEquals(testProducts.get(2), sorted.get(0));
+        assertEquals(testProducts.get(3), sorted.get(1));
+        assertEquals(testProducts.get(1), sorted.get(2));
+        assertEquals(testProducts.get(0), sorted.get(3));
     }
 
     @Test
     @DisplayName("Get the most expensive product")
     void getMostExpensiveProduct() {
-        this.shop.setProducts( testProducts);
-        assertEquals(this.shop.getMostExpensiveProduct(),  testProducts.get(0));
+        this.shop.setProducts(testProducts);
+        assertEquals(testProducts.get(0), this.shop.getMostExpensiveProduct());
     }
 }

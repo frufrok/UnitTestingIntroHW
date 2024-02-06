@@ -1,20 +1,15 @@
 package Lesson1;
-
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class ShopTest {
-
     private static ArrayList<Product> testProducts;
+
     private Shop shop;
 
     @BeforeAll
-    static void CreateTestProducts() {
+    static void createTestProducts() {
         testProducts = new ArrayList<>();
         Product p1 = new Product();
         Product p2 = new Product();
@@ -35,29 +30,31 @@ class ShopTest {
     }
 
     @BeforeEach
-    void CreateShop() {
+    void createShop() {
         this.shop = new Shop();
     }
 
     @Test
-    void GetSetProducts() {
+    @DisplayName("Set and get products")
+    void getSetProducts() {
         this.shop.setProducts( testProducts);
         assertEquals(this.shop.getProducts(),  testProducts);
     }
 
     @Test
+    @DisplayName("Sort products")
     void sortProductsByPrice() {
         this.shop.setProducts( testProducts);
         ArrayList<Product> sorted = new ArrayList<>(this.shop.sortProductsByPrice());
-        assertTrue(sorted.size() == 4
-                && sorted.get(0) ==  testProducts.get(2)
-                && sorted.get(1) ==  testProducts.get(3)
-                && sorted.get(2) ==  testProducts.get(1)
-                && sorted.get(3) ==  testProducts.get(0)
-        );
+        assertEquals(sorted.size(), 4);
+        assertEquals(sorted.get(0), testProducts.get(2));
+        assertEquals(sorted.get(1), testProducts.get(3));
+        assertEquals(sorted.get(2), testProducts.get(1));
+        assertEquals(sorted.get(3), testProducts.get(0));
     }
 
     @Test
+    @DisplayName("Get the most expensive product")
     void getMostExpensiveProduct() {
         this.shop.setProducts( testProducts);
         assertEquals(this.shop.getMostExpensiveProduct(),  testProducts.get(0));

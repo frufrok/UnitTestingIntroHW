@@ -198,10 +198,10 @@ b. Сравнивает эти средние значения и выводит
 
 ### Решение
 
-* Код программы находится в папке ./src/main/java/Lesson6/
-* Код тестов находится в папке ./src/test/java/Lesson6/
-* Отчет Checkstyle находится по адресу ./htmlReport/Lesson6/Style/site/checkstyle.html
-* Отчет о покрытии тестами находится по адресу ./htmlReport/Lesson6/Coverage/index.html
+* Код программы находится в папке [./src/main/java/Lesson6/](https://github.com/frufrok/UnitTestingIntroHW/tree/main/src/main/java/Lesson6)
+* Код тестов находится в папке [./src/test/java/Lesson6/](https://github.com/frufrok/UnitTestingIntroHW/tree/main/src/test/java/Lesson6)
+* Отчет Checkstyle находится по адресу [./htmlReport/Lesson6/Style/site/checkstyle.html](https://github.com/frufrok/UnitTestingIntroHW/blob/main/htmlReport/Lesson6/Style/site/checkstyle.html)
+* Отчет о покрытии тестами находится по адресу [./htmlReport/Lesson6/Coverage/index.html](https://github.com/frufrok/UnitTestingIntroHW/blob/main/htmlReport/Lesson6/Coverage/index.html)
 
 Тестами не покрыта единственная строка в методе getBiggerListMessage(),
 где выбрасывается исключение ArithmeticException в случае, если 

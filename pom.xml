@@ -36,6 +36,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.puppycrawl.tools</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>10.13.0</version>
+        </dependency>
 
         <!-- Да, для использования JUnit Jupiter (JUnit 5)
         в ваших тестах в Java необходимо добавить соответствующую
